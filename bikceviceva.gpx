@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gpx version="1.1" creator="GPS Visualizer https://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<trk>
+  <name>Bikčevićeva staza 18</name>
+  <desc>foot=yes
+highway=footway
+name=Bikčevićeva staza 18
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/56047689"></link>
+  <trkseg>
+    <trkpt lat="45.8701661" lon="15.9787959">
+      <ele>306.922</ele>
+    </trkpt>
+    <trkpt lat="45.8702378" lon="15.9789008">
+      <ele>308.48</ele>
+    </trkpt>
+    <trkpt lat="45.8704784" lon="15.9790686">
+      <ele>311.304</ele>
+    </trkpt>
+    <trkpt lat="45.871823" lon="15.9788969">
+      <ele>323.125</ele>
+    </trkpt>
+    <trkpt lat="45.8727792" lon="15.9789828">
+      <ele>330.731</ele>
+    </trkpt>
+    <trkpt lat="45.8731079" lon="15.9791973">
+      <ele>341.695</ele>
+    </trkpt>
+    <trkpt lat="45.8740939" lon="15.9788969">
+      <ele>362.322</ele>
+    </trkpt>
+    <trkpt lat="45.8744225" lon="15.9785536">
+      <ele>356.137</ele>
+    </trkpt>
+    <trkpt lat="45.8747213" lon="15.9786394">
+      <ele>364.107</ele>
+    </trkpt>
+    <trkpt lat="45.8750052" lon="15.978854">
+      <ele>373.944</ele>
+    </trkpt>
+    <trkpt lat="45.8753189" lon="15.978854">
+      <ele>379.665</ele>
+    </trkpt>
+    <trkpt lat="45.8756028" lon="15.9786609">
+      <ele>386.135</ele>
+    </trkpt>
+    <trkpt lat="45.8759165" lon="15.9784463">
+      <ele>390.355</ele>
+    </trkpt>
+    <trkpt lat="45.8762003" lon="15.9782317">
+      <ele>389.528</ele>
+    </trkpt>
+    <trkpt lat="45.8764991" lon="15.9782961">
+      <ele>396.317</ele>
+    </trkpt>
+    <trkpt lat="45.8767232" lon="15.978339">
+      <ele>402.729</ele>
+    </trkpt>
+    <trkpt lat="45.8770369" lon="15.9780172">
+      <ele>406.799</ele>
+    </trkpt>
+    <trkpt lat="45.8772085" lon="15.9777873">
+      <ele>403.994</ele>
+    </trkpt>
+    <trkpt lat="45.8772863" lon="15.9778021">
+      <ele>405.147</ele>
+    </trkpt>
+    <trkpt lat="45.8777838" lon="15.9781459">
+      <ele>417.462</ele>
+    </trkpt>
+    <trkpt lat="45.8778663" lon="15.9782191">
+      <ele>418.695</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>bicycle=yes
+foot=yes
+highway=path
+incline=up
+mtb:name=18-20
+mtb:scale=1
+mtb:scale:uphill=1
+name=Bikčevićeva staza
+route=mtb
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/60930010"></link>
+  <trkseg>
+    <trkpt lat="45.8898502" lon="15.9800337">
+      <ele>609.379</ele>
+    </trkpt>
+    <trkpt lat="45.8899801" lon="15.980119">
+      <ele>611.305</ele>
+    </trkpt>
+    <trkpt lat="45.890201" lon="15.9802473">
+      <ele>614.807</ele>
+    </trkpt>
+    <trkpt lat="45.8903161" lon="15.9802439">
+      <ele>616.813</ele>
+    </trkpt>
+    <trkpt lat="45.8905463" lon="15.9800886">
+      <ele>621.887</ele>
+    </trkpt>
+    <trkpt lat="45.8907836" lon="15.9799671">
+      <ele>627.342</ele>
+    </trkpt>
+    <trkpt lat="45.8910068" lon="15.9799165">
+      <ele>630.475</ele>
+    </trkpt>
+    <trkpt lat="45.8911783" lon="15.9799064">
+      <ele>632.239</ele>
+    </trkpt>
+    <trkpt lat="45.891432" lon="15.9797511">
+      <ele>635.999</ele>
+    </trkpt>
+    <trkpt lat="45.891444" lon="15.979742">
+      <ele>636.183</ele>
+    </trkpt>
+    <trkpt lat="45.8917397" lon="15.9795182">
+      <ele>642.724</ele>
+    </trkpt>
+    <trkpt lat="45.8919582" lon="15.9794001">
+      <ele>648.156</ele>
+    </trkpt>
+    <trkpt lat="45.8921978" lon="15.9794001">
+      <ele>651.606</ele>
+    </trkpt>
+    <trkpt lat="45.8924328" lon="15.9793933">
+      <ele>655.137</ele>
+    </trkpt>
+    <trkpt lat="45.8925641" lon="15.979441">
+      <ele>656.225</ele>
+    </trkpt>
+    <trkpt lat="45.8926465" lon="15.9794709">
+      <ele>657.066</ele>
+    </trkpt>
+    <trkpt lat="45.8928956" lon="15.9794338">
+      <ele>661.888</ele>
+    </trkpt>
+    <trkpt lat="45.8931281" lon="15.9793528">
+      <ele>666.258</ele>
+    </trkpt>
+    <trkpt lat="45.8934453" lon="15.9792921">
+      <ele>669.694</ele>
+    </trkpt>
+    <trkpt lat="45.8937883" lon="15.9790929">
+      <ele>674.859</ele>
+    </trkpt>
+    <trkpt lat="45.8942416" lon="15.978779">
+      <ele>680.671</ele>
+    </trkpt>
+    <trkpt lat="45.8944413" lon="15.9785292">
+      <ele>684.795</ele>
+    </trkpt>
+    <trkpt lat="45.8947819" lon="15.9782862">
+      <ele>687.51</ele>
+    </trkpt>
+    <trkpt lat="45.8949652" lon="15.9781681">
+      <ele>691.834</ele>
+    </trkpt>
+    <trkpt lat="45.8954679" lon="15.9779689">
+      <ele>701.123</ele>
+    </trkpt>
+    <trkpt lat="45.8956464" lon="15.9778306">
+      <ele>704.837</ele>
+    </trkpt>
+    <trkpt lat="45.8959072" lon="15.9776753">
+      <ele>708.887</ele>
+    </trkpt>
+    <trkpt lat="45.896081" lon="15.9775808">
+      <ele>711.231</ele>
+    </trkpt>
+    <trkpt lat="45.896175" lon="15.977601">
+      <ele>711.43</ele>
+    </trkpt>
+    <trkpt lat="45.8962916" lon="15.9777015">
+      <ele>709.523</ele>
+    </trkpt>
+    <trkpt lat="45.8964279" lon="15.9778674">
+      <ele>707.286</ele>
+    </trkpt>
+    <trkpt lat="45.8965859" lon="15.9780005">
+      <ele>710.189</ele>
+    </trkpt>
+    <trkpt lat="45.8967329" lon="15.9780444">
+      <ele>713.712</ele>
+    </trkpt>
+    <trkpt lat="45.8969188" lon="15.9780621">
+      <ele>717.279</ele>
+    </trkpt>
+    <trkpt lat="45.897045" lon="15.978045">
+      <ele>720.438</ele>
+    </trkpt>
+    <trkpt lat="45.897124" lon="15.9779689">
+      <ele>724.062</ele>
+    </trkpt>
+    <trkpt lat="45.8972555" lon="15.9777833">
+      <ele>731.225</ele>
+    </trkpt>
+    <trkpt lat="45.8973988" lon="15.9776179">
+      <ele>736.048</ele>
+    </trkpt>
+    <trkpt lat="45.8976595" lon="15.9774458">
+      <ele>737.632</ele>
+    </trkpt>
+    <trkpt lat="45.8977981" lon="15.9773445">
+      <ele>738.289</ele>
+    </trkpt>
+    <trkpt lat="45.8979179" lon="15.9773141">
+      <ele>739.185</ele>
+    </trkpt>
+    <trkpt lat="45.8982163" lon="15.9772905">
+      <ele>742.736</ele>
+    </trkpt>
+    <trkpt lat="45.8984277" lon="15.9772466">
+      <ele>746.183</ele>
+    </trkpt>
+    <trkpt lat="45.898531" lon="15.9772601">
+      <ele>746.702</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>foot=yes
+highway=path
+name=Bikčevićeva staza
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/60992036"></link>
+  <trkseg>
+    <trkpt lat="45.9031947" lon="15.9728746">
+      <ele>869.234</ele>
+    </trkpt>
+    <trkpt lat="45.9032152" lon="15.9728064">
+      <ele>870.882</ele>
+    </trkpt>
+    <trkpt lat="45.9032643" lon="15.9726723">
+      <ele>873.935</ele>
+    </trkpt>
+    <trkpt lat="45.9033007" lon="15.9725927">
+      <ele>875.802</ele>
+    </trkpt>
+    <trkpt lat="45.9033386" lon="15.9725086">
+      <ele>877.794</ele>
+    </trkpt>
+    <trkpt lat="45.9033734" lon="15.9724723">
+      <ele>878.483</ele>
+    </trkpt>
+    <trkpt lat="45.9033639" lon="15.9724291">
+      <ele>879.478</ele>
+    </trkpt>
+    <trkpt lat="45.903307" lon="15.97237">
+      <ele>880.574</ele>
+    </trkpt>
+    <trkpt lat="45.9032216" lon="15.9722518">
+      <ele>882.197</ele>
+    </trkpt>
+    <trkpt lat="45.9031829" lon="15.9721828">
+      <ele>883.073</ele>
+    </trkpt>
+    <trkpt lat="45.9031093" lon="15.9720517">
+      <ele>884.274</ele>
+    </trkpt>
+    <trkpt lat="45.9029969" lon="15.9719335">
+      <ele>883.961</ele>
+    </trkpt>
+    <trkpt lat="45.9029321" lon="15.971813">
+      <ele>884.962</ele>
+    </trkpt>
+    <trkpt lat="45.9028862" lon="15.971663">
+      <ele>886.814</ele>
+    </trkpt>
+    <trkpt lat="45.9028514" lon="15.9715175">
+      <ele>888.967</ele>
+    </trkpt>
+    <trkpt lat="45.902834" lon="15.9712447">
+      <ele>894.033</ele>
+    </trkpt>
+    <trkpt lat="45.9027786" lon="15.9711083">
+      <ele>895.097</ele>
+    </trkpt>
+    <trkpt lat="45.9027093" lon="15.9710284">
+      <ele>895.852</ele>
+    </trkpt>
+    <trkpt lat="45.9025878" lon="15.9708946">
+      <ele>897.036</ele>
+    </trkpt>
+    <trkpt lat="45.9024795" lon="15.9707127">
+      <ele>899.819</ele>
+    </trkpt>
+    <trkpt lat="45.9024218" lon="15.9706356">
+      <ele>901.138</ele>
+    </trkpt>
+    <trkpt lat="45.9023965" lon="15.9705178">
+      <ele>903.935</ele>
+    </trkpt>
+    <trkpt lat="45.9023732" lon="15.9704057">
+      <ele>906.899</ele>
+    </trkpt>
+    <trkpt lat="45.902355" lon="15.970285">
+      <ele>910.269</ele>
+    </trkpt>
+    <trkpt lat="45.9023428" lon="15.970122">
+      <ele>912.043</ele>
+    </trkpt>
+    <trkpt lat="45.9023206" lon="15.9700769">
+      <ele>912.313</ele>
+    </trkpt>
+    <trkpt lat="45.9022507" lon="15.9700609">
+      <ele>911.824</ele>
+    </trkpt>
+    <trkpt lat="45.9022143" lon="15.9699824">
+      <ele>912.011</ele>
+    </trkpt>
+    <trkpt lat="45.9022001" lon="15.9698529">
+      <ele>912.698</ele>
+    </trkpt>
+    <trkpt lat="45.9021829" lon="15.9696451">
+      <ele>913.015</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>bicycle=yes
+highway=path
+incline=down
+mtb:name=18-20
+mtb:scale=1
+mtb:scale:uphill=1
+name=Bikčevićeva staza
+route=mtb
+surface=unpaved</desc>
+  <link href="http://osm.org/browse/way/108519204"></link>
+  <trkseg>
+    <trkpt lat="45.8993657" lon="15.9771279">
+      <ele>751.43</ele>
+    </trkpt>
+    <trkpt lat="45.8991947" lon="15.9771839">
+      <ele>748.144</ele>
+    </trkpt>
+    <trkpt lat="45.8990976" lon="15.9772429">
+      <ele>746.572</ele>
+    </trkpt>
+    <trkpt lat="45.898784" lon="15.9772966">
+      <ele>746.039</ele>
+    </trkpt>
+    <trkpt lat="45.898531" lon="15.9772601">
+      <ele>746.702</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Staza 19 / Bikčevićeva staza</name>
+  <desc>foot=yes
+highway=footway
+incline=down
+mtb:name=18-20
+mtb:scale=1
+mtb:scale:uphill=1
+name=Staza 19 / Bikčevićeva staza
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/108526554"></link>
+  <trkseg>
+    <trkpt lat="45.8898502" lon="15.9800337">
+      <ele>609.379</ele>
+    </trkpt>
+    <trkpt lat="45.8896736" lon="15.9801168">
+      <ele>607.141</ele>
+    </trkpt>
+    <trkpt lat="45.8895474" lon="15.9801301">
+      <ele>605.419</ele>
+    </trkpt>
+    <trkpt lat="45.8893531" lon="15.9801917">
+      <ele>602.94</ele>
+    </trkpt>
+    <trkpt lat="45.8891841" lon="15.980286">
+      <ele>600.31</ele>
+    </trkpt>
+    <trkpt lat="45.8890403" lon="15.9803802">
+      <ele>600.0</ele>
+    </trkpt>
+    <trkpt lat="45.8888814" lon="15.9805614">
+      <ele>599.905</ele>
+    </trkpt>
+    <trkpt lat="45.8887426" lon="15.9807028">
+      <ele>598.166</ele>
+    </trkpt>
+    <trkpt lat="45.888619" lon="15.9809021">
+      <ele>596.279</ele>
+    </trkpt>
+    <trkpt lat="45.8885767" lon="15.9809923">
+      <ele>595.053</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>bicycle=yes
+highway=path
+incline=down
+mtb:name=18-20
+mtb:scale=1
+mtb:scale:uphill=2
+name=Bikčevićeva staza
+route=mtb
+surface=unpaved</desc>
+  <link href="http://osm.org/browse/way/108526558"></link>
+  <trkseg>
+    <trkpt lat="45.9031947" lon="15.9728746">
+      <ele>869.234</ele>
+    </trkpt>
+    <trkpt lat="45.9030659" lon="15.9730479">
+      <ele>866.066</ele>
+    </trkpt>
+    <trkpt lat="45.9029166" lon="15.9732518">
+      <ele>861.821</ele>
+    </trkpt>
+    <trkpt lat="45.9027449" lon="15.9734342">
+      <ele>858.394</ele>
+    </trkpt>
+    <trkpt lat="45.9026179" lon="15.9733913">
+      <ele>856.952</ele>
+    </trkpt>
+    <trkpt lat="45.9025731" lon="15.973343">
+      <ele>856.923</ele>
+    </trkpt>
+    <trkpt lat="45.9024873" lon="15.9733483">
+      <ele>855.513</ele>
+    </trkpt>
+    <trkpt lat="45.9023566" lon="15.9733215">
+      <ele>853.03</ele>
+    </trkpt>
+    <trkpt lat="45.9022372" lon="15.973343">
+      <ele>850.217</ele>
+    </trkpt>
+    <trkpt lat="45.9020244" lon="15.973343">
+      <ele>843.486</ele>
+    </trkpt>
+    <trkpt lat="45.9019572" lon="15.9732679">
+      <ele>842.12</ele>
+    </trkpt>
+    <trkpt lat="45.9016809" lon="15.9731391">
+      <ele>836.171</ele>
+    </trkpt>
+    <trkpt lat="45.9015876" lon="15.9730479">
+      <ele>836.272</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>bicycle=yes
+highway=path
+incline=down
+mtb:name=18-20
+mtb:scale=1
+mtb:scale:uphill=2
+name=Bikčevićeva staza
+route=mtb
+surface=unpaved</desc>
+  <link href="http://osm.org/browse/way/376893601"></link>
+  <trkseg>
+    <trkpt lat="45.9001728" lon="15.976803">
+      <ele>765.433</ele>
+    </trkpt>
+    <trkpt lat="45.8999002" lon="15.9768781">
+      <ele>764.074</ele>
+    </trkpt>
+    <trkpt lat="45.8996501" lon="15.9770122">
+      <ele>758.994</ele>
+    </trkpt>
+    <trkpt lat="45.899512" lon="15.9771142">
+      <ele>753.938</ele>
+    </trkpt>
+    <trkpt lat="45.8993657" lon="15.9771279">
+      <ele>751.43</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>bicycle=yes
+highway=path
+incline=down
+mtb:name=18-20
+mtb:scale=2
+mtb:scale:uphill=2
+name=Bikčevićeva staza
+route=mtb
+surface=unpaved</desc>
+  <link href="http://osm.org/browse/way/376894243"></link>
+  <trkseg>
+    <trkpt lat="45.9015876" lon="15.9730479">
+      <ele>836.272</ele>
+    </trkpt>
+    <trkpt lat="45.901464" lon="15.9728719">
+      <ele>838.421</ele>
+    </trkpt>
+    <trkpt lat="45.901331" lon="15.9729073">
+      <ele>837.939</ele>
+    </trkpt>
+    <trkpt lat="45.9011611" lon="15.9730577">
+      <ele>836.42</ele>
+    </trkpt>
+    <trkpt lat="45.9010293" lon="15.973532">
+      <ele>827.961</ele>
+    </trkpt>
+    <trkpt lat="45.9008815" lon="15.9736682">
+      <ele>825.97</ele>
+    </trkpt>
+    <trkpt lat="45.9008803" lon="15.9738682">
+      <ele>820.701</ele>
+    </trkpt>
+    <trkpt lat="45.9009505" lon="15.9740717">
+      <ele>814.284</ele>
+    </trkpt>
+    <trkpt lat="45.9009702" lon="15.9743071">
+      <ele>808.752</ele>
+    </trkpt>
+    <trkpt lat="45.9008692" lon="15.9745406">
+      <ele>806.054</ele>
+    </trkpt>
+    <trkpt lat="45.900682" lon="15.9747371">
+      <ele>806.972</ele>
+    </trkpt>
+    <trkpt lat="45.900751" lon="15.9750202">
+      <ele>799.973</ele>
+    </trkpt>
+    <trkpt lat="45.9006414" lon="15.9753688">
+      <ele>793.06</ele>
+    </trkpt>
+    <trkpt lat="45.9004616" lon="15.9754891">
+      <ele>792.351</ele>
+    </trkpt>
+    <trkpt lat="45.9005305" lon="15.9757103">
+      <ele>785.824</ele>
+    </trkpt>
+    <trkpt lat="45.9004308" lon="15.9759492">
+      <ele>781.294</ele>
+    </trkpt>
+    <trkpt lat="45.9004887" lon="15.9762518">
+      <ele>773.802</ele>
+    </trkpt>
+    <trkpt lat="45.9002781" lon="15.9766518">
+      <ele>768.263</ele>
+    </trkpt>
+    <trkpt lat="45.9001728" lon="15.976803">
+      <ele>765.433</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>foot=yes
+highway=footway
+name=Bikčevićeva staza
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/708021950"></link>
+  <trkseg>
+    <trkpt lat="45.8782406" lon="15.9785511">
+      <ele>424.437</ele>
+    </trkpt>
+    <trkpt lat="45.8782918" lon="15.9785965">
+      <ele>425.214</ele>
+    </trkpt>
+    <trkpt lat="45.8790088" lon="15.9792188">
+      <ele>442.145</ele>
+    </trkpt>
+    <trkpt lat="45.8793968" lon="15.9794863">
+      <ele>451.078</ele>
+    </trkpt>
+    <trkpt lat="45.8795427" lon="15.9795464">
+      <ele>451.846</ele>
+    </trkpt>
+    <trkpt lat="45.8797408" lon="15.9795716">
+      <ele>450.201</ele>
+    </trkpt>
+    <trkpt lat="45.8797919" lon="15.9796102">
+      <ele>450.66</ele>
+    </trkpt>
+    <trkpt lat="45.8799334" lon="15.9797461">
+      <ele>453.623</ele>
+    </trkpt>
+    <trkpt lat="45.8800419" lon="15.9797983">
+      <ele>452.533</ele>
+    </trkpt>
+    <trkpt lat="45.8800947" lon="15.9798406">
+      <ele>452.01</ele>
+    </trkpt>
+    <trkpt lat="45.880119" lon="15.9799532">
+      <ele>454.605</ele>
+    </trkpt>
+    <trkpt lat="45.8801251" lon="15.980215">
+      <ele>462.737</ele>
+    </trkpt>
+    <trkpt lat="45.8801368" lon="15.980306">
+      <ele>465.604</ele>
+    </trkpt>
+    <trkpt lat="45.8802139" lon="15.9803814">
+      <ele>467.167</ele>
+    </trkpt>
+    <trkpt lat="45.8804682" lon="15.9804619">
+      <ele>467.004</ele>
+    </trkpt>
+    <trkpt lat="45.8811898" lon="15.9807423">
+      <ele>466.917</ele>
+    </trkpt>
+    <trkpt lat="45.8817424" lon="15.9811071">
+      <ele>475.819</ele>
+    </trkpt>
+    <trkpt lat="45.8823101" lon="15.981386">
+      <ele>491.82</ele>
+    </trkpt>
+    <trkpt lat="45.8828518" lon="15.9815128">
+      <ele>498.317</ele>
+    </trkpt>
+    <trkpt lat="45.8830663" lon="15.9815396">
+      <ele>499.28</ele>
+    </trkpt>
+    <trkpt lat="45.8834304" lon="15.9816221">
+      <ele>505.951</ele>
+    </trkpt>
+    <trkpt lat="45.8838072" lon="15.9818219">
+      <ele>510.429</ele>
+    </trkpt>
+    <trkpt lat="45.8839432" lon="15.9817027">
+      <ele>510.648</ele>
+    </trkpt>
+    <trkpt lat="45.884135" lon="15.9816487">
+      <ele>511.24</ele>
+    </trkpt>
+    <trkpt lat="45.8842278" lon="15.9816408">
+      <ele>512.074</ele>
+    </trkpt>
+    <trkpt lat="45.8845218" lon="15.9815595">
+      <ele>513.383</ele>
+    </trkpt>
+    <trkpt lat="45.8847606" lon="15.9815731">
+      <ele>519.48</ele>
+    </trkpt>
+    <trkpt lat="45.8849857" lon="15.9816011">
+      <ele>528.285</ele>
+    </trkpt>
+    <trkpt lat="45.8852789" lon="15.9815843">
+      <ele>535.282</ele>
+    </trkpt>
+    <trkpt lat="45.8854892" lon="15.9815324">
+      <ele>537.911</ele>
+    </trkpt>
+    <trkpt lat="45.8857677" lon="15.9815492">
+      <ele>542.962</ele>
+    </trkpt>
+    <trkpt lat="45.8861823" lon="15.9816076">
+      <ele>551.593</ele>
+    </trkpt>
+    <trkpt lat="45.8866065" lon="15.9816384">
+      <ele>559.966</ele>
+    </trkpt>
+    <trkpt lat="45.8869506" lon="15.9816411">
+      <ele>566.469</ele>
+    </trkpt>
+    <trkpt lat="45.8873133" lon="15.9815536">
+      <ele>572.314</ele>
+    </trkpt>
+    <trkpt lat="45.8876779" lon="15.9814609">
+      <ele>581.254</ele>
+    </trkpt>
+    <trkpt lat="45.888006" lon="15.9812569">
+      <ele>586.81</ele>
+    </trkpt>
+    <trkpt lat="45.8885767" lon="15.9809923">
+      <ele>595.053</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Bikčevićeva staza</name>
+  <desc>foot=yes
+highway=footway
+name=Bikčevićeva staza
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/708021951"></link>
+  <trkseg>
+    <trkpt lat="45.8778663" lon="15.9782191">
+      <ele>418.695</ele>
+    </trkpt>
+    <trkpt lat="45.8782406" lon="15.9785511">
+      <ele>424.437</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>Staza 1</name>
+  <desc>foot=yes
+highway=footway
+name=Staza 1
+sac_scale=mountain_hiking
+surface=unpaved
+trail_visibility=excellent</desc>
+  <link href="http://osm.org/browse/way/145205928"></link>
+  <trkseg>
+    <trkpt lat="45.903844" lon="15.9692987">
+      <ele>950.963</ele>
+    </trkpt>
+    <trkpt lat="45.9035466" lon="15.9693927">
+      <ele>945.515</ele>
+    </trkpt>
+    <trkpt lat="45.9034497" lon="15.9694007">
+      <ele>942.666</ele>
+    </trkpt>
+    <trkpt lat="45.9033923" lon="15.9693796">
+      <ele>941.165</ele>
+    </trkpt>
+    <trkpt lat="45.903211" lon="15.9693319">
+      <ele>936.549</ele>
+    </trkpt>
+    <trkpt lat="45.9031181" lon="15.9693033">
+      <ele>934.199</ele>
+    </trkpt>
+    <trkpt lat="45.9029781" lon="15.969276">
+      <ele>930.824</ele>
+    </trkpt>
+    <trkpt lat="45.9028565" lon="15.9693052">
+      <ele>927.844</ele>
+    </trkpt>
+    <trkpt lat="45.9027481" lon="15.969347">
+      <ele>925.023</ele>
+    </trkpt>
+    <trkpt lat="45.9025646" lon="15.969494">
+      <ele>920.312</ele>
+    </trkpt>
+    <trkpt lat="45.9025277" lon="15.9695191">
+      <ele>919.545</ele>
+    </trkpt>
+    <trkpt lat="45.902455" lon="15.9695407">
+      <ele>918.084</ele>
+    </trkpt>
+    <trkpt lat="45.902352" lon="15.9695331">
+      <ele>915.973</ele>
+    </trkpt>
+    <trkpt lat="45.9023213" lon="15.9695476">
+      <ele>915.379</ele>
+    </trkpt>
+    <trkpt lat="45.9021829" lon="15.9696451">
+      <ele>913.015</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+</gpx>
