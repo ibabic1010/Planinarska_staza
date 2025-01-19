@@ -1,4 +1,0 @@
-cd "C:/Users/Ivan Babić/Desktop/FAKS/9. SEMESTAR/Kartografija/Medvednica"
-python -m http.server
-http://localhost:8000
-45.90382018082172, 15.969204292184454
