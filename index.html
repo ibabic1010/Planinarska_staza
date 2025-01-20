@@ -3,55 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Planinarska staza</title>
+    <!-- Učitaj Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Učitaj Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.min.js"></script>
     <style>
         /* Stil za kartu */
         #map {
             width: 100%;
             height: 600px;
         }
-        .trail-info {
-            background: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        #infoButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .legend {
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
-            background: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-        .legend div {
-            margin-bottom: 5px;
-        }
-        .legend span {
-            display: inline-block;
-            width: 20px;
-            height: 10px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        /* Stil za proširenu sliku */
         .popup-image {
             display: block;
             max-width: 100%;
@@ -88,11 +49,6 @@
 <body>
     <h1>Planinarska staza</h1>
     <div id="map"></div>
-    <button id="infoButton">Informacije o stazi</button>
-    <div class="legend">
-        <div><span style="background: blue;"></span> Staza</div>
-        <div><span style="background: none; border: 2px solid #3388ff; border-radius: 50%; width: 10px; height: 10px;"></span> Oznake visina</div>
-    </div>
 
     <!-- Modal za proširenu sliku -->
     <div id="imageModal" class="modal">
@@ -109,49 +65,10 @@
             maxZoom: 19,
         }).addTo(map);
 
-        // Pokušaj učitati GPX datoteku
-        let gpxFile = 'bikceviceva.gpx';
-        let gpxLayer = new L.GPX(gpxFile, {
-            async: true,
-            marker_options: {
-                startIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
-                endIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png',
-                shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-            },
-            polyline_options: {
-                color: 'blue',
-                weight: 3,
-                opacity: 0.75
-            }
-        });
-
-        gpxLayer.on('addline', function(e) {
-            let points = e.line.getLatLngs();
-            points.forEach(point => {
-                if (point.meta && point.meta.ele) {
-                    let marker = L.circleMarker([point.lat, point.lng], {
-                        radius: 6,
-                        color: '#3388ff',
-                        fillColor: '#3388ff',
-                        fillOpacity: 0.0
-                    }).bindPopup(Visina: ${Math.round(point.meta.ele)} m).addTo(map);
-
-                    marker.on('mouseover', function() {
-                        this.setStyle({ fillOpacity: 0.8 });
-                        this.openPopup();
-                    });
-                    marker.on('mouseout', function() {
-                        this.setStyle({ fillOpacity: 0.0 });
-                        this.closePopup();
-                    });
-                }
-            });
-        }).addTo(map);
-
-        // Dodaj ručni marker s pop-upom sa slikom
-        let marker = L.marker([45.90382, 15.96920], {
+        // Dodaj marker na sredini staze
+        let middleMarker = L.marker([45.90382018082172, 15.969204292184454], {
             icon: L.icon({
-                iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-blue.png',
+                iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', // URL za ikonu
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
                 popupAnchor: [0, -41]
@@ -163,20 +80,12 @@
                 <p>Detalji o stazi.</p>
                 <img src="Staza18grafikon.png" alt="Grafikon" class="popup-image">
             </div>
-          `);
+          `, { closeButton: true });
 
-        // Dodaj marker za planinarski dom
-        L.marker([45.90382018082172, 15.969204292184454]).addTo(map)
-            .bindPopup(`
-                <div style="text-align: center;">
-                    <h3>Planinarski dom Puntijarka</h3>
-                    <p>Planinarski dom "Ivan Pačkovski".<br>45.90362N, 15.96896E<br>957m nadmorske visine</p>
-                    <img src="DSC01301.jpg" alt="Puntijarka" style="width:200px; border-radius:8px;">
-                </div>
-            `);
-
-        // Dodaj mjerilo u donjem lijevom kutu
-        L.control.scale().addTo(map);
+        // Klik na marker otvara pop-up
+        middleMarker.on('click', function() {
+            this.openPopup();
+        });
 
         // Dodaj funkcionalnost za proširenje slike
         const modal = document.getElementById('imageModal');
@@ -199,6 +108,9 @@
                 modal.style.display = 'none';
             }
         });
+
+        // Dodaj mjerilo u donjem lijevom kutu
+        L.control.scale().addTo(map);
     </script>
 </body>
 </html>
