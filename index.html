@@ -109,7 +109,7 @@
             maxZoom: 19,
         }).addTo(map);
 
-        // Učitaj GPX datoteku
+        // Pokušaj učitati GPX datoteku
         let gpxFile = 'bikceviceva.gpx';
         let gpxLayer = new L.GPX(gpxFile, {
             async: true,
@@ -126,72 +126,47 @@
         });
 
         gpxLayer.on('addline', function(e) {
-            let line = e.line;
-            let points = line.getLatLngs();
-
-            // Dodavanje posebnog markera na sredini staze
-            let middlePoint = points[Math.floor(points.length / 2)];
-            if (middlePoint) {
-                let middleMarker = L.marker([middlePoint.lat, middlePoint.lng], {
-                    icon: L.icon({
-                        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-blue.png',
-                        iconSize: [25, 41],
-                        iconAnchor: [12, 41],
-                        popupAnchor: [0, -41]
-                    })
-                }).addTo(map)
-                  .bindPopup(`
-                    <div style="text-align: center;">
-                        <h3>Točka na stazi</h3>
-                        <p>Grafikon visine Bikčevićeve staze.</p>
-                        <img src="Staza18grafikon.png" alt="Grafikon" class="popup-image">
-                    </div>
-                  `, { closeButton: true });
-
-                middleMarker.on('click', function() {
-                    this.openPopup();
-                });
-            }
-
+            let points = e.line.getLatLngs();
             points.forEach(point => {
                 if (point.meta && point.meta.ele) {
                     let marker = L.circleMarker([point.lat, point.lng], {
                         radius: 6,
                         color: '#3388ff',
                         fillColor: '#3388ff',
-                        fillOpacity: 0.0 // Sakrij marker u početku
+                        fillOpacity: 0.0
                     }).bindPopup(Visina: ${Math.round(point.meta.ele)} m).addTo(map);
 
                     marker.on('mouseover', function() {
-                        this.setStyle({ fillOpacity: 0.8 }); // Prikaži marker
+                        this.setStyle({ fillOpacity: 0.8 });
                         this.openPopup();
                     });
                     marker.on('mouseout', function() {
-                        this.setStyle({ fillOpacity: 0.0 }); // Sakrij marker
+                        this.setStyle({ fillOpacity: 0.0 });
                         this.closePopup();
                     });
                 }
             });
         }).addTo(map);
 
-        // Dodavanje funkcionalnosti za gumb s informacijama
-        document.getElementById('infoButton').addEventListener('click', function() {
-            L.popup()
-                .setLatLng(map.getCenter())
-                .setContent(`
-                    <div class="trail-info">
-                        <h4>Informacije o stazi</h4>
-                        <p><strong>Duljina staze:</strong> 5.9 km</p>
-                        <p><strong>Ukupan uspon:</strong> 500 m</p>
-                        <p><strong>Ukupan spust:</strong> 200 m</p>
-                        <p><strong>Vrijeme trajanja:</strong> 2 h 20 min</p>
-                    </div>
-                `)
-                .openOn(map);
-        });
+        // Dodaj ručni marker s pop-upom sa slikom
+        let marker = L.marker([45.90382, 15.96920], {
+            icon: L.icon({
+                iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-blue.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [0, -41]
+            })
+        }).addTo(map)
+          .bindPopup(`
+            <div style="text-align: center;">
+                <h3>Točka na stazi</h3>
+                <p>Detalji o stazi.</p>
+                <img src="Staza18grafikon.png" alt="Grafikon" class="popup-image">
+            </div>
+          `);
 
-        // Dodavanje markera za planinarski dom Puntijarka
-        let puntijarka = L.marker([45.90382018082172, 15.969204292184454]).addTo(map)
+        // Dodaj marker za planinarski dom
+        L.marker([45.90382018082172, 15.969204292184454]).addTo(map)
             .bindPopup(`
                 <div style="text-align: center;">
                     <h3>Planinarski dom Puntijarka</h3>
@@ -199,13 +174,6 @@
                     <img src="DSC01301.jpg" alt="Puntijarka" style="width:200px; border-radius:8px;">
                 </div>
             `);
-
-        puntijarka.on('mouseover', function() {
-            this.openPopup();
-        });
-        puntijarka.on('mouseout', function() {
-            this.closePopup();
-        });
 
         // Dodaj mjerilo u donjem lijevom kutu
         L.control.scale().addTo(map);
