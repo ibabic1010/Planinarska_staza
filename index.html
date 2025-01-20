@@ -15,27 +15,41 @@
             width: 100%;
             height: 600px;
         }
-        .trail-info {
-            background: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .popup-image {
+            display: block;
+            max-width: 100%;
+            cursor: pointer;
         }
-        #infoButton {
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-close {
             position: absolute;
             top: 10px;
             right: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
             cursor: pointer;
         }
         .legend {
             position: fixed;
             bottom: 20px;
-            right: 10px;
+            left: 10px;
             background: white;
             padding: 10px;
             border: 1px solid #ccc;
@@ -59,7 +73,13 @@
 <body>
     <h1>Planinarska staza</h1>
     <div id="map"></div>
-    <button id="infoButton">Informacije o stazi</button>
+
+    <!-- Modal za proširenu sliku -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <div class="legend">
         <div><span style="background: blue;"></span> Staza</div>
         <div><span style="background: #3388ff; border-radius: 50%; width: 10px; height: 10px;"></span> Oznake visina</div>
@@ -67,7 +87,7 @@
 
     <script>
         // Kreiraj mapu
-        let map = L.map('map').setView([45.90382018082172, 15.969204292184454], 13); // Prilagodi koordinate prema području staze
+        let map = L.map('map').setView([45.90382018082172, 15.969204292184454], 13);
 
         // Dodaj osnovnu kartu (OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -116,23 +136,54 @@
             });
         }).addTo(map);
 
-        // Dodavanje funkcionalnosti za gumb s informacijama
-        document.getElementById('infoButton').addEventListener('click', function() {
-            L.popup()
-                .setLatLng(map.getCenter())
-                .setContent(`
-                    <div class="trail-info">
-                        <h4>Informacije o stazi</h4>
-                        <p><strong>Duljina staze:</strong> 6.5 km</p>
-                        <p><strong>Ukupan uspon:</strong> 500 m</p>
-                        <p><strong>Ukupan spust:</strong> 200 m</p>
-                        <p><strong>Vrijeme trajanja:</strong> 2 h</p>
-                    </div>
-                `)
-                .openOn(map);
+        // Dodaj marker na sredini staze sa slikom
+        let middleMarker = L.marker([45.90382018082172, 15.969204292184454], {
+            icon: L.icon({
+                iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', // URL za ikonu
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [0, -41]
+            })
+        }).addTo(map)
+          .bindPopup(`
+            <div style="text-align: center;">
+                <h3>Grafikon staze</h3>
+                <p>Detaljan prikaz visinskog profila staze.</p>
+                <img src="Staza18grafikon.png" alt="Grafikon" class="popup-image">
+            </div>
+          `, { closeButton: true });
+
+        // Klik na marker otvara pop-up
+        middleMarker.on('click', function() {
+            this.openPopup();
         });
 
-        // Dodavanje markera za planinarski dom Puntijarka
+        // Dodaj funkcionalnost za proširenje slike
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.modal-close');
+
+        document.body.addEventListener('click', function(event) {
+            if (event.target.classList.contains('popup-image')) {
+                modal.style.display = 'block';
+                modalImage.src = event.target.src;
+            }
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Dodaj mjerilo u donjem lijevom kutu
+        L.control.scale({ position: 'bottomleft' }).addTo(map);
+
+        // Dodaj marker za planinarski dom Puntijarka
         let puntijarka = L.marker([45.90382018082172, 15.969204292184454]).addTo(map)
             .bindPopup(`
                 <div style="text-align: center;">
