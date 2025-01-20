@@ -54,6 +54,38 @@
             margin-right: 5px;
             vertical-align: middle;
         }
+        /* Stil za proširenu sliku */
+        .popup-image {
+            display: block;
+            max-width: 100%;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +95,12 @@
     <div class="legend">
         <div><span style="background: blue;"></span> Staza</div>
         <div><span style="background: none; border: 2px solid #3388ff; border-radius: 50%; width: 10px; height: 10px;"></span> Oznake visina</div>
+    </div>
+
+    <!-- Modal za proširenu sliku -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
 
     <script>
@@ -90,7 +128,7 @@
             }
         });
 
-        // Kada se GPX učita, dodaj točke visine
+        // Kada se GPX učita, dodaj točke visine i marker na sredini
         gpxLayer.on('addline', function(e) {
             let line = e.line;
             let points = line.getLatLngs();
@@ -100,7 +138,7 @@
             if (middlePoint) {
                 let middleMarker = L.marker([middlePoint.lat, middlePoint.lng], {
                     icon: L.icon({
-                        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+                        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-blue.png',
                         iconSize: [25, 41],
                         iconAnchor: [12, 41],
                         popupAnchor: [0, -41]
@@ -110,15 +148,13 @@
                     <div style="text-align: center;">
                         <h3>Točka na stazi</h3>
                         <p>Detalji o stazi.</p>
-                        <img src="Staza18grafikon.png" alt="Grafikon" style="width:200px; border-radius:8px;">
+                        <img src="Staza18grafikon.png" alt="Grafikon" class="popup-image">
                     </div>
-                  `);
+                  `, { closeButton: true });
 
-                middleMarker.on('mouseover', function() {
+                // Klik na marker otvara pop-up
+                middleMarker.on('click', function() {
                     this.openPopup();
-                });
-                middleMarker.on('mouseout', function() {
-                    this.closePopup();
                 });
             }
 
@@ -178,6 +214,28 @@
 
         // Dodaj mjerilo u donjem lijevom kutu
         L.control.scale().addTo(map);
+
+        // Dodaj funkcionalnost za proširenje slike
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.modal-close');
+
+        document.body.addEventListener('click', function(event) {
+            if (event.target.classList.contains('popup-image')) {
+                modal.style.display = 'block';
+                modalImage.src = event.target.src;
+            }
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
