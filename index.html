@@ -95,6 +95,33 @@
             let line = e.line;
             let points = line.getLatLngs();
 
+            // Dodavanje posebnog markera na sredini staze
+            let middlePoint = points[Math.floor(points.length / 2)];
+            if (middlePoint) {
+                let middleMarker = L.marker([middlePoint.lat, middlePoint.lng], {
+                    icon: L.icon({
+                        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+                        iconSize: [25, 41],
+                        iconAnchor: [12, 41],
+                        popupAnchor: [0, -41]
+                    })
+                }).addTo(map)
+                  .bindPopup(`
+                    <div style="text-align: center;">
+                        <h3>Točka na stazi</h3>
+                        <p>Detalji o stazi.</p>
+                        <img src="Staza18grafikon.png" alt="Grafikon" style="width:200px; border-radius:8px;">
+                    </div>
+                  `);
+
+                middleMarker.on('mouseover', function() {
+                    this.openPopup();
+                });
+                middleMarker.on('mouseout', function() {
+                    this.closePopup();
+                });
+            }
+
             points.forEach(point => {
                 if (point.meta && point.meta.ele) {
                     let marker = L.circleMarker([point.lat, point.lng], {
@@ -123,10 +150,10 @@
                 .setContent(`
                     <div class="trail-info">
                         <h4>Informacije o stazi</h4>
-                        <p><strong>Duljina staze:</strong> 5.9 km</p>
+                        <p><strong>Duljina staze:</strong> 6.5 km</p>
                         <p><strong>Ukupan uspon:</strong> 500 m</p>
                         <p><strong>Ukupan spust:</strong> 200 m</p>
-                        <p><strong>Vrijeme trajanja:</strong> 2 h 20 min</p>
+                        <p><strong>Vrijeme trajanja:</strong> 2 h</p>
                     </div>
                 `)
                 .openOn(map);
@@ -148,6 +175,9 @@
         puntijarka.on('mouseout', function() {
             this.closePopup();
         });
+
+        // Dodaj mjerilo u donjem lijevom kutu
+        L.control.scale().addTo(map);
     </script>
 </body>
 </html>
